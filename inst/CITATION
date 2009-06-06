@@ -1,0 +1,7 @@
+citeHeader("To cite RootTreeToR use:")
+
+citeEntry(entry="misc",
+	  author="Adam L. Lyon",
+	  organization="Fermi National Accelerator Laboratory",
+	  address="Batavia, IL 60510, USA",
+	  year=version$year)

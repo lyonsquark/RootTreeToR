@@ -1,0 +1,20 @@
+4.0 Full documentation. Released version.
+
+v3_3 Added ability to read Root histogram files. No documentation yet.
+
+v3_2 Added writeDFToRoot to write a data frame to a simple Root tree. Also
+added tests for WriteDFToRoot. Added tracing to treeToR
+
+v3_1 Now uses Makevars and a configure.ac file instead of a Makefile. 
+Also switched to NAMESPACE usage.
+
+v3_0 TreeToR now inherits from TSelector. 
+
+v2_1 -- Fixed PROTECT problems in RDataFrame. Completely rewrote the memory 
+management for the R data. Now, each column object keeps its own R vector
+of information. When the user asks for the data frame, then and only then
+does that actual data frame get made.
+
+v2_0 -- First version that wraps the R data frame in the RDataFrame class
+
+v1_3 -- Version of code that does *not* wrap the R Data Frame

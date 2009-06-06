@@ -1,0 +1,4 @@
+These notes are meant for me (Adam) as reminders...
+
+1) If configure.ac is changed, don't forget to run autoconf.
+2) Set the version number in configure.ac

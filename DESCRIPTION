@@ -1,0 +1,12 @@
+Package: RootTreeToR
+Version: 4.0
+Date: 2007-03-12
+Title: Root Tree To R
+Author: Adam Lyon <lyon@fnal.gov> Fermi National Accelerator Laboratory, Batavia, IL, USA
+Maintainer: Adam Lyon <lyon@fnal.gov>
+Description: Read Root Trees into R
+SystemRequirements: A properly configured installation of Root. See README.
+Depends: R (>= 2.0.0), methods
+License: GPL2
+LazyLoad: yes
+
