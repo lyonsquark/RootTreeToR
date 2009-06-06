@@ -1,0 +1,8 @@
+#xcode noise
+RootTreeToR.xcodeProj/build/*
+*.pbxuser
+*.mode1v3
+
+# Mac noise
+.DS_store
+profile
