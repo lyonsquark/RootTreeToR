@@ -2,10 +2,10 @@
 #include <TROOT.h>
 #include <TRint.h>
 
-extern "C" {
 #include <R.h>
 #include <Rdefines.h>
-}
+
+#include <string>
 
 static TRint* rootApp;
 static int argc;
@@ -27,10 +27,10 @@ SEXP initRoot()
 
 SEXP rootCommand(SEXP comm)
 {
-  char* command = CHAR(STRING_ELT(comm, 0));
+	std::string command = CHAR(STRING_ELT(comm, 0));
   int err;
 	
-  gROOT->ProcessLine(command, &err);
+  gROOT->ProcessLine(command.c_str(), &err);
 	
   SEXP r = NEW_INTEGER(1);
   INTEGER(r)[0] = err;

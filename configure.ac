@@ -1,4 +1,4 @@
-AC_INIT([RootTreeToR], 4.0, [lyon@fnal.gov])
+AC_INIT([RootTreeToR], 4.1, [lyon@fnal.gov])
 
 # ROOTSYS must be set, or else root-config doesn't work
 AC_PATH_PROG([ROOTCONFIG], [root-config], [noroot], [$PATH:$ROOTSYS/bin])
@@ -35,7 +35,7 @@ AC_SUBST([CPPFLAGS], ["-I../inst/include ${root_cflags} ${CPPFLAGS} ${CPICFLAGS}
 
 AC_SUBST([LDFLAGS], ["${SHLIB_CXXLD} ${SHLIB_LDFLAGS} ${LDFLAGS}"])
 
-AC_SUBST([LIBS], ["${root_glibs} -lTreePlayer -lMinuit -lHtml -lGX11 -lGX11TTF -lCore"])
+AC_SUBST([LIBS], ["${root_glibs} -lTreePlayer -lMinuit -lHtml -lGX11 -lGX11TTF -lCint -lCore"])
 
 AC_SUBST(CPPFLAGS)
 AC_SUBST(LDFLAGS)

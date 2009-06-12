@@ -3,10 +3,10 @@
 #include "TEventList.h"
 #include "TFile.h"
 
-extern "C" {
 #include <R.h>
 #include <Rdefines.h>
-}
+
+#include <string>
 
 #include "eventListWrapper.h"
 
@@ -42,7 +42,7 @@ SEXP initEventListWrapper()
 //   If R is calling it, then we don't manage the memory!
 SEXP getEventListWithName(SEXP name, SEXP mangeItsMemory)
 {
-  char* daName = CHAR(STRING_ELT(name, 0));
+	std::string daName = CHAR(STRING_ELT(name, 0));
   bool doManage = LOGICAL(mangeItsMemory)[0] == 1;
   
   return getEventListWithNameC(daName, doManage);
@@ -50,13 +50,13 @@ SEXP getEventListWithName(SEXP name, SEXP mangeItsMemory)
 
 //////////////////////////
 // Get an event list given a name
-SEXP getEventListWithNameC(char* name, bool manageItsMemory)
+SEXP getEventListWithNameC(std::string name, bool manageItsMemory)
 {
   
-  TEventList* theList = (TEventList*) gDirectory->Get( name );
+  TEventList* theList = (TEventList*) gDirectory->Get( name.c_str() );
   
   if ( ! theList ) {
-    REprintf("!! Could not find EventList with name %s\n", name);
+    REprintf("!! Could not find EventList with name %s\n", name.c_str());
     error("Abort!");
   }
   
@@ -82,12 +82,12 @@ SEXP wrapTEventListPointer(TEventList* ptr, bool manageItsMemory)
 // Make a new event list given a name, title, and a set of events to put in it
 SEXP newEventList(SEXP name, SEXP title, SEXP entryNums)
 {
-  char* daName = CHAR( STRING_ELT(name, 0) );
-  char* daTitle = CHAR( STRING_ELT(title, 0) );
+	std::string daName = CHAR( STRING_ELT(name, 0) );
+	std::string daTitle = CHAR( STRING_ELT(title, 0) );
   
   int n = GET_LENGTH(entryNums);
   
-  TEventList* el = new TEventList(daName, daTitle, n, 100);
+  TEventList* el = new TEventList(daName.c_str(), daTitle.c_str(), n, 100);
   
   // Wrap it -- and I made it, so I manage it
   SEXP wrapPtr = wrapTEventListPointer(el, true);

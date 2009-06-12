@@ -4,6 +4,8 @@
 #ifndef __EVENTLISTWRAPPER_H__
 #define __EVENTLISTWRAPPER_H__
 
+#include <string>
+
 class TEventList;
 
 extern "C"
@@ -32,7 +34,7 @@ extern "C"
 
 TEventList* checkForEventListWrapper(SEXP ptr);
 
-SEXP getEventListWithNameC(char* name, bool manageItsMemory);
+SEXP getEventListWithNameC(std::string name, bool manageItsMemory);
 
 SEXP wrapTEventListPointer(TEventList* ptr, bool manageItsMemory);
 

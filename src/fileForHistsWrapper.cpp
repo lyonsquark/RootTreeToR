@@ -6,11 +6,10 @@
 #include "TH1F.h"
 #include "TKey.h"
 #include <string.h>
+#include <string>
 
-extern "C" {
 #include <R.h>
 #include <Rdefines.h>
-}
 
 #include "fileForHistsWrapper.h"
 
@@ -77,9 +76,9 @@ SEXP deleteFileForHists(SEXP fileForHists)
 SEXP openFileForHists(SEXP rootFileNameR)
 {
   // Get the file name
-  char* fileName = CHAR(STRING_ELT(rootFileNameR, 0));
+	std::string fileName = CHAR(STRING_ELT(rootFileNameR, 0));
   
-  TFile* f = new TFile(fileName);
+  TFile* f = new TFile(fileName.c_str());
 
   if ( ! f ) error("Cannot open file");
   if ( ! f->IsOpen() ) {
@@ -102,8 +101,8 @@ const char* setFileDirectory(TFile* f, SEXP directoryR)
   // Change to a sub directory directory if necessary
   if ( ! isNull(directoryR) ) {
     
-    char* dir = CHAR( STRING_ELT(directoryR, 0 ) );
-    if ( ! f->cd(dir) ) {
+		std::string dir = CHAR( STRING_ELT(directoryR, 0 ) );
+    if ( ! f->cd(dir.c_str()) ) {
       error("namesMatchingClass: cd failed");
     }
   }
@@ -121,7 +120,7 @@ SEXP namesMatchingClass(SEXP fileForHists, SEXP directoryR, SEXP classTypeR)
   const char* oldDirectory = setFileDirectory(f, directoryR);
 
   // Get the class type
-  char* classType = CHAR( STRING_ELT(classTypeR, 0) );
+	std::string classType = CHAR( STRING_ELT(classTypeR, 0) );
   
   // Keep track of the ones we want
   std::vector<const char*> names;
@@ -132,7 +131,7 @@ SEXP namesMatchingClass(SEXP fileForHists, SEXP directoryR, SEXP classTypeR)
   TList* l = gDirectory->GetListOfKeys();
   for ( unsigned int i = 0; i < l->GetEntries(); ++i ) {
     TKey* k = (TKey*) l->At(i);
-    if ( strcmp( k->GetClassName(), classType ) == 0 ) {
+    if ( strcmp( k->GetClassName(), classType.c_str() ) == 0 ) {
       names.push_back( k->GetName() );
       cycles.push_back( k->GetCycle() );
     }
@@ -178,13 +177,13 @@ SEXP getHistsR(SEXP fileForHists, SEXP histNames, SEXP directoryR)
   for ( unsigned int i = 0; i < GET_LENGTH(histNames); ++i ) {
 
     // Get the name of the object
-    const char* name = CHAR( STRING_ELT(histNames, i) );
+		std::string name = CHAR( STRING_ELT(histNames, i) );
     
     // Set the list name
-    SET_ELEMENT( ansNames, i, mkChar(name) );
+    SET_ELEMENT( ansNames, i, mkChar(name.c_str()) );
 
     // What is this thing?
-    TKey* key = gDirectory->FindKey(name);
+    TKey* key = gDirectory->FindKey(name.c_str());
 
     // If not found, then skip
     if ( ! key ) continue;
@@ -199,7 +198,7 @@ SEXP getHistsR(SEXP fileForHists, SEXP histNames, SEXP directoryR)
 
       // Get the histogram
       TH1F* hist;
-      gDirectory->GetObject(name, hist);
+      gDirectory->GetObject(name.c_str(), hist);
       
       // For TH1F, there are 6 elements to the list (name, type, title,
       //    breaks, counts, 
@@ -217,7 +216,7 @@ SEXP getHistsR(SEXP fileForHists, SEXP histNames, SEXP directoryR)
       
       // Add the name
       SEXP theName = addCharVector(data, dataNames, j++, 1, "name");
-      SET_STRING_ELT(theName, 0, mkChar(name));
+      SET_STRING_ELT(theName, 0, mkChar(name.c_str()));
 
       // Add basic histogram information
       j = addHistInfo(data, dataNames, j, hist);
@@ -239,7 +238,7 @@ SEXP getHistsR(SEXP fileForHists, SEXP histNames, SEXP directoryR)
 
     else {
       REprintf("!! Do not know how to handle %s of class %s !!\n", 
-	       name, className);
+	       name.c_str(), className);
       continue;
     }
 

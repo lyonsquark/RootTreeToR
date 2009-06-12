@@ -162,10 +162,10 @@ void RDataFrameStringColumn::commitRow(unsigned int row)
   if ( ! m_isSet ) throw RDataFrameColumn_NotSetException( name() );
 
   if ( m_value != std::string("NA") ) {
-    SET_ELEMENT( m_column, row, mkChar(m_value.c_str()) );
+    SET_STRING_ELT( m_column, row, mkChar(m_value.c_str()) );
   }
   else {
-    SET_ELEMENT( m_column, row, NA_STRING );
+    SET_STRING_ELT( m_column, row, NA_STRING );
   }
 	
   m_isSet = false;
@@ -317,7 +317,7 @@ SEXP RDataFrame::dataFrameInAnsForm()
   for ( unsigned int i=0; i < m_nCols; ++i )
   {
     SET_ELEMENT( data, i, m_columns[i]->column() );
-    SET_ELEMENT( data_names, i, mkChar( m_columns[i]->name().c_str() ) );
+    SET_STRING_ELT( data_names, i, mkChar( m_columns[i]->name().c_str() ) );
   }
   
   SET_NAMES(data, data_names);

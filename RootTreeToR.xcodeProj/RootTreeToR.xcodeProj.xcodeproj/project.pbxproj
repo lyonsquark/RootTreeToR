@@ -1,0 +1,346 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXFileReference section */
+		665E60AF0FDA43D300C91818 /* cleanup */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = cleanup; path = ../cleanup; sourceTree = SOURCE_ROOT; };
+		665E60B00FDA43D300C91818 /* config.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = config.log; path = ../config.log; sourceTree = SOURCE_ROOT; };
+		665E60B10FDA43D300C91818 /* config.status */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = config.status; path = ../config.status; sourceTree = SOURCE_ROOT; };
+		665E60B20FDA43D300C91818 /* configure */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = configure; path = ../configure; sourceTree = SOURCE_ROOT; };
+		665E60B30FDA43D300C91818 /* configure.ac */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = configure.ac; path = ../configure.ac; sourceTree = SOURCE_ROOT; };
+		665E60B40FDA43D300C91818 /* DESCRIPTION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DESCRIPTION; path = ../DESCRIPTION; sourceTree = SOURCE_ROOT; };
+		665E60B60FDA43D300C91818 /* CITATION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CITATION; sourceTree = "<group>"; };
+		665E60B90FDA43D300C91818 /* exampleEs.root */ = {isa = PBXFileReference; lastKnownFileType = file; path = exampleEs.root; sourceTree = "<group>"; };
+		665E60BA0FDA43D300C91818 /* histos.root */ = {isa = PBXFileReference; lastKnownFileType = file; path = histos.root; sourceTree = "<group>"; };
+		665E60BC0FDA43D300C91818 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		665E60BD0FDA43D300C91818 /* mcTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mcTree.cpp; sourceTree = "<group>"; };
+		665E60BE0FDA43D300C91818 /* mcTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcTree.h; sourceTree = "<group>"; };
+		665E60BF0FDA43D300C91818 /* met.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = met.cpp; sourceTree = "<group>"; };
+		665E60C00FDA43D300C91818 /* met.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = met.h; sourceTree = "<group>"; };
+		665E60C10FDA43D300C91818 /* trksInCone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = trksInCone.cpp; sourceTree = "<group>"; };
+		665E60C20FDA43D300C91818 /* trksInCone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trksInCone.h; sourceTree = "<group>"; };
+		665E60C40FDA43D300C91818 /* eventListWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventListWrapper.h; sourceTree = "<group>"; };
+		665E60C50FDA43D300C91818 /* fileForHistsWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileForHistsWrapper.h; sourceTree = "<group>"; };
+		665E60C60FDA43D300C91818 /* rDataFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rDataFrame.h; sourceTree = "<group>"; };
+		665E60C70FDA43D300C91818 /* rootChainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rootChainManager.h; sourceTree = "<group>"; };
+		665E60C80FDA43D300C91818 /* rootChainManagerWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rootChainManagerWrapper.h; sourceTree = "<group>"; };
+		665E60C90FDA43D300C91818 /* treeToR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = treeToR.h; sourceTree = "<group>"; };
+		665E60CB0FDA43D300C91818 /* addEventLists.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = addEventLists.Rd; sourceTree = "<group>"; };
+		665E60CC0FDA43D300C91818 /* clearEventList.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = clearEventList.Rd; sourceTree = "<group>"; };
+		665E60CD0FDA43D300C91818 /* createEventList.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = createEventList.Rd; sourceTree = "<group>"; };
+		665E60CE0FDA43D300C91818 /* EventList-class.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "EventList-class.Rd"; sourceTree = "<group>"; };
+		665E60CF0FDA43D300C91818 /* getEventList.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = getEventList.Rd; sourceTree = "<group>"; };
+		665E60D00FDA43D300C91818 /* getEventListName.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = getEventListName.Rd; sourceTree = "<group>"; };
+		665E60D10FDA43D300C91818 /* getHists.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = getHists.Rd; sourceTree = "<group>"; };
+		665E60D20FDA43D300C91818 /* getNames.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = getNames.Rd; sourceTree = "<group>"; };
+		665E60D30FDA43D300C91818 /* listDirs.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = listDirs.Rd; sourceTree = "<group>"; };
+		665E60D40FDA43D300C91818 /* listHists.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = listHists.Rd; sourceTree = "<group>"; };
+		665E60D50FDA43D300C91818 /* makeEventList.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = makeEventList.Rd; sourceTree = "<group>"; };
+		665E60D60FDA43D300C91818 /* narrowWithEventList.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = narrowWithEventList.Rd; sourceTree = "<group>"; };
+		665E60D70FDA43D300C91818 /* nEntries-methods.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "nEntries-methods.Rd"; sourceTree = "<group>"; };
+		665E60D80FDA43D300C91818 /* niceNames.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = niceNames.Rd; sourceTree = "<group>"; };
+		665E60D90FDA43D300C91818 /* openFileWithHists.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = openFileWithHists.Rd; sourceTree = "<group>"; };
+		665E60DA0FDA43D300C91818 /* openRootChain.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = openRootChain.Rd; sourceTree = "<group>"; };
+		665E60DB0FDA43D300C91818 /* RootChain-class.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "RootChain-class.Rd"; sourceTree = "<group>"; };
+		665E60DC0FDA43D300C91818 /* rootCommand.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rootCommand.Rd; sourceTree = "<group>"; };
+		665E60DD0FDA43D300C91818 /* RootTreeToR-package.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "RootTreeToR-package.Rd"; sourceTree = "<group>"; };
+		665E60DE0FDA43D300C91818 /* setVerbose.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = setVerbose.Rd; sourceTree = "<group>"; };
+		665E60DF0FDA43D300C91818 /* toR.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = toR.Rd; sourceTree = "<group>"; };
+		665E60E00FDA43D300C91818 /* toRUser.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = toRUser.Rd; sourceTree = "<group>"; };
+		665E60E10FDA43D300C91818 /* writeDFToRoot.Rd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = writeDFToRoot.Rd; sourceTree = "<group>"; };
+		665E60E20FDA43D300C91818 /* MYNOTES */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MYNOTES; path = ../MYNOTES; sourceTree = SOURCE_ROOT; };
+		665E60E30FDA43D300C91818 /* NAMESPACE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = NAMESPACE; path = ../NAMESPACE; sourceTree = SOURCE_ROOT; };
+		665E60E50FDA43D300C91818 /* common.R */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.rez; path = common.R; sourceTree = "<group>"; };
+		665E60E60FDA43D300C91818 /* EventList.R */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.rez; path = EventList.R; sourceTree = "<group>"; };
+		665E60E70FDA43D300C91818 /* FileForHists.R */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.rez; path = FileForHists.R; sourceTree = "<group>"; };
+		665E60E80FDA43D300C91818 /* niceNames.R */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.rez; path = niceNames.R; sourceTree = "<group>"; };
+		665E60E90FDA43D300C91818 /* RootChain.R */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.rez; path = RootChain.R; sourceTree = "<group>"; };
+		665E60EA0FDA43D300C91818 /* rootCommand.R */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.rez; path = rootCommand.R; sourceTree = "<group>"; };
+		665E60EB0FDA43D300C91818 /* writeDFToRoot.R */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.rez; path = writeDFToRoot.R; sourceTree = "<group>"; };
+		665E60EC0FDA43D300C91818 /* zzz.R */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.rez; path = zzz.R; sourceTree = "<group>"; };
+		665E60ED0FDA43D300C91818 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.txt; path = ../README.txt; sourceTree = SOURCE_ROOT; };
+		665E60EF0FDA43D300C91818 /* eventListWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = eventListWrapper.cpp; sourceTree = "<group>"; };
+		665E60F00FDA43D300C91818 /* fileForHistsWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fileForHistsWrapper.cpp; sourceTree = "<group>"; };
+		665E60F10FDA43D300C91818 /* Makevars */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makevars; sourceTree = "<group>"; };
+		665E60F20FDA43D300C91818 /* Makevars.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makevars.in; sourceTree = "<group>"; };
+		665E60F30FDA43D300C91818 /* rDataFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rDataFrame.cpp; sourceTree = "<group>"; };
+		665E60F40FDA43D300C91818 /* rootChainManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rootChainManager.cpp; sourceTree = "<group>"; };
+		665E60F50FDA43D300C91818 /* rootChainManagerWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rootChainManagerWrapper.cpp; sourceTree = "<group>"; };
+		665E60F60FDA43D300C91818 /* rootCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rootCommand.cpp; sourceTree = "<group>"; };
+		665E60F70FDA43D300C91818 /* treeToR.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = treeToR.cpp; sourceTree = "<group>"; };
+		665E60F80FDA43D300C91818 /* writeDFToRoot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = writeDFToRoot.cpp; sourceTree = "<group>"; };
+		665E60FA0FDA43D300C91818 /* writeDFToRoot-test.R */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.rez; path = "writeDFToRoot-test.R"; sourceTree = "<group>"; };
+		665E60FB0FDA43D300C91818 /* versionTags */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = versionTags; path = ../versionTags; sourceTree = SOURCE_ROOT; };
+		665E610F0FDA446700C91818 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = SOURCE_ROOT; };
+		665E61100FDA44B700C91818 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitattributes; path = ../.gitattributes; sourceTree = SOURCE_ROOT; };
+		665E61260FDA4A2E00C91818 /* Rcpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rcpp.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* RootTreeToR.xcodeProj */ = {
+			isa = PBXGroup;
+			children = (
+				665E60AF0FDA43D300C91818 /* cleanup */,
+				665E60B00FDA43D300C91818 /* config.log */,
+				665E60B10FDA43D300C91818 /* config.status */,
+				665E60B20FDA43D300C91818 /* configure */,
+				665E60B30FDA43D300C91818 /* configure.ac */,
+				665E60B40FDA43D300C91818 /* DESCRIPTION */,
+				665E60B50FDA43D300C91818 /* inst */,
+				665E60CA0FDA43D300C91818 /* man */,
+				665E60E20FDA43D300C91818 /* MYNOTES */,
+				665E60E30FDA43D300C91818 /* NAMESPACE */,
+				665E60E40FDA43D300C91818 /* R */,
+				665E60ED0FDA43D300C91818 /* README.txt */,
+				665E60EE0FDA43D300C91818 /* src */,
+				665E60F90FDA43D300C91818 /* tests */,
+				665E60FB0FDA43D300C91818 /* versionTags */,
+			);
+			name = RootTreeToR.xcodeProj;
+			sourceTree = "<group>";
+		};
+		665E60B50FDA43D300C91818 /* inst */ = {
+			isa = PBXGroup;
+			children = (
+				665E60B60FDA43D300C91818 /* CITATION */,
+				665E60B70FDA43D300C91818 /* doc */,
+				665E60B80FDA43D300C91818 /* examples */,
+				665E60C30FDA43D300C91818 /* include */,
+			);
+			name = inst;
+			path = ../inst;
+			sourceTree = SOURCE_ROOT;
+		};
+		665E60B70FDA43D300C91818 /* doc */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = doc;
+			sourceTree = "<group>";
+		};
+		665E60B80FDA43D300C91818 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				665E60B90FDA43D300C91818 /* exampleEs.root */,
+				665E60BA0FDA43D300C91818 /* histos.root */,
+				665E60BB0FDA43D300C91818 /* toRUser */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		665E60BB0FDA43D300C91818 /* toRUser */ = {
+			isa = PBXGroup;
+			children = (
+				665E60BC0FDA43D300C91818 /* Makefile */,
+				665E60BD0FDA43D300C91818 /* mcTree.cpp */,
+				665E60BE0FDA43D300C91818 /* mcTree.h */,
+				665E60BF0FDA43D300C91818 /* met.cpp */,
+				665E60C00FDA43D300C91818 /* met.h */,
+				665E60C10FDA43D300C91818 /* trksInCone.cpp */,
+				665E60C20FDA43D300C91818 /* trksInCone.h */,
+			);
+			path = toRUser;
+			sourceTree = "<group>";
+		};
+		665E60C30FDA43D300C91818 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				665E61260FDA4A2E00C91818 /* Rcpp.h */,
+				665E60C40FDA43D300C91818 /* eventListWrapper.h */,
+				665E60C50FDA43D300C91818 /* fileForHistsWrapper.h */,
+				665E60C60FDA43D300C91818 /* rDataFrame.h */,
+				665E60C70FDA43D300C91818 /* rootChainManager.h */,
+				665E60C80FDA43D300C91818 /* rootChainManagerWrapper.h */,
+				665E60C90FDA43D300C91818 /* treeToR.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		665E60CA0FDA43D300C91818 /* man */ = {
+			isa = PBXGroup;
+			children = (
+				665E60CB0FDA43D300C91818 /* addEventLists.Rd */,
+				665E60CC0FDA43D300C91818 /* clearEventList.Rd */,
+				665E60CD0FDA43D300C91818 /* createEventList.Rd */,
+				665E60CE0FDA43D300C91818 /* EventList-class.Rd */,
+				665E60CF0FDA43D300C91818 /* getEventList.Rd */,
+				665E60D00FDA43D300C91818 /* getEventListName.Rd */,
+				665E60D10FDA43D300C91818 /* getHists.Rd */,
+				665E60D20FDA43D300C91818 /* getNames.Rd */,
+				665E60D30FDA43D300C91818 /* listDirs.Rd */,
+				665E60D40FDA43D300C91818 /* listHists.Rd */,
+				665E60D50FDA43D300C91818 /* makeEventList.Rd */,
+				665E60D60FDA43D300C91818 /* narrowWithEventList.Rd */,
+				665E60D70FDA43D300C91818 /* nEntries-methods.Rd */,
+				665E60D80FDA43D300C91818 /* niceNames.Rd */,
+				665E60D90FDA43D300C91818 /* openFileWithHists.Rd */,
+				665E60DA0FDA43D300C91818 /* openRootChain.Rd */,
+				665E60DB0FDA43D300C91818 /* RootChain-class.Rd */,
+				665E60DC0FDA43D300C91818 /* rootCommand.Rd */,
+				665E60DD0FDA43D300C91818 /* RootTreeToR-package.Rd */,
+				665E60DE0FDA43D300C91818 /* setVerbose.Rd */,
+				665E60DF0FDA43D300C91818 /* toR.Rd */,
+				665E60E00FDA43D300C91818 /* toRUser.Rd */,
+				665E60E10FDA43D300C91818 /* writeDFToRoot.Rd */,
+			);
+			name = man;
+			path = ../man;
+			sourceTree = SOURCE_ROOT;
+		};
+		665E60E40FDA43D300C91818 /* R */ = {
+			isa = PBXGroup;
+			children = (
+				665E60E50FDA43D300C91818 /* common.R */,
+				665E60E60FDA43D300C91818 /* EventList.R */,
+				665E60E70FDA43D300C91818 /* FileForHists.R */,
+				665E60E80FDA43D300C91818 /* niceNames.R */,
+				665E60E90FDA43D300C91818 /* RootChain.R */,
+				665E60EA0FDA43D300C91818 /* rootCommand.R */,
+				665E60EB0FDA43D300C91818 /* writeDFToRoot.R */,
+				665E60EC0FDA43D300C91818 /* zzz.R */,
+			);
+			name = R;
+			path = ../R;
+			sourceTree = SOURCE_ROOT;
+		};
+		665E60EE0FDA43D300C91818 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				665E61100FDA44B700C91818 /* .gitattributes */,
+				665E60EF0FDA43D300C91818 /* eventListWrapper.cpp */,
+				665E60F00FDA43D300C91818 /* fileForHistsWrapper.cpp */,
+				665E610F0FDA446700C91818 /* .gitignore */,
+				665E60F10FDA43D300C91818 /* Makevars */,
+				665E60F20FDA43D300C91818 /* Makevars.in */,
+				665E60F30FDA43D300C91818 /* rDataFrame.cpp */,
+				665E60F40FDA43D300C91818 /* rootChainManager.cpp */,
+				665E60F50FDA43D300C91818 /* rootChainManagerWrapper.cpp */,
+				665E60F60FDA43D300C91818 /* rootCommand.cpp */,
+				665E60F70FDA43D300C91818 /* treeToR.cpp */,
+				665E60F80FDA43D300C91818 /* writeDFToRoot.cpp */,
+			);
+			name = src;
+			path = ../src;
+			sourceTree = SOURCE_ROOT;
+		};
+		665E60F90FDA43D300C91818 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				665E60FA0FDA43D300C91818 /* writeDFToRoot-test.R */,
+			);
+			name = tests;
+			path = ../tests;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		D28A88AD04BDD90700651E21 /* RootTreeToR.xcodeProj */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "RootTreeToR.xcodeProj" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			dependencies = (
+			);
+			name = RootTreeToR.xcodeProj;
+			passBuildSettingsInEnvironment = 1;
+			productName = RootTreeToR.xcodeProj;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "RootTreeToR.xcodeProj" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* RootTreeToR.xcodeProj */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D28A88AD04BDD90700651E21 /* RootTreeToR.xcodeProj */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB919008733D9F0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = RootTreeToR.xcodeProj;
+			};
+			name = Debug;
+		};
+		1DEB919108733D9F0010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = RootTreeToR.xcodeProj;
+			};
+			name = Release;
+		};
+		1DEB919408733D9F0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Debug;
+		};
+		1DEB919508733D9F0010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "RootTreeToR.xcodeProj" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB919008733D9F0010E9CD /* Debug */,
+				1DEB919108733D9F0010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "RootTreeToR.xcodeProj" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB919408733D9F0010E9CD /* Debug */,
+				1DEB919508733D9F0010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

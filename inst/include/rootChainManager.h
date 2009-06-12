@@ -12,10 +12,8 @@
 
 class TChain;
 
-extern "C" {
 #include <R.h>
 #include <Rdefines.h>
-}
 
 
 class RootChainManager {

@@ -7,10 +7,10 @@
 #include "TTree.h"
 #include "TFile.h"
 
-extern "C" { 
 #include <R.h>
 #include <Rdefines.h>
-}
+
+#include <string>
 
 extern "C" {
   SEXP writeDFToRoot(SEXP nameR, SEXP titleR, SEXP df, SEXP nrowsR,
@@ -25,20 +25,20 @@ SEXP writeDFToRoot(SEXP nameR, SEXP titleR, SEXP df, SEXP nrowsR,
 		   SEXP modeR)
 {
   // Extract stuff
-  char* name = CHAR(STRING_ELT(nameR,0));
-  char* title = CHAR(STRING_ELT(titleR,0));
+	std::string name = CHAR(STRING_ELT(nameR,0));
+	std::string title = CHAR(STRING_ELT(titleR,0));
   int nrows = INTEGER(nrowsR)[0];
-  char* rootFileName = CHAR(STRING_ELT(rootFileNameR,0));
-  char* mode = CHAR(STRING_ELT(modeR,0));
+	std::string rootFileName = CHAR(STRING_ELT(rootFileNameR,0));
+	std::string mode = CHAR(STRING_ELT(modeR,0));
 
   int ncols = LENGTH(df);
 
   // Open the output file
-  TFile rootFile(rootFileName, mode);
+  TFile rootFile(rootFileName.c_str(), mode.c_str());
   if ( ! rootFile.IsOpen() ) error("File cannot be opened");
 
   // Create the tree
-  TTree* tree = new TTree(name, title);
+  TTree* tree = new TTree(name.c_str(), title.c_str());
   
   // Loop over branches
   for ( unsigned col = 0; col < ncols; ++col ) {
