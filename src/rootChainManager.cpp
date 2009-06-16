@@ -71,7 +71,9 @@ unsigned int RootChainManager::nEntries() const {
 SEXP RootChainManager::names() const {
 	
   // Advance to the first entry
-  m_chain->GetEntry(0);
+  //m_chain->GetEntry(0);
+  // Above commented out 20090616 - for TMBTrees this crashed root 
+	// on an unresolved symbol for allocator<char>. 
 	
   // Get the branches
   TObjArray* branches = m_chain->GetListOfBranches();
