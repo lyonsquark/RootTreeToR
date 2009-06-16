@@ -15,7 +15,7 @@ toRUser(rootChain, userFunction, nEntries = 100, firstEntry = 0, initialSize = 1
     \code{\link{openRootChain}}.}
   \item{userFunction}{ A string with the name of the function to
     call. See details section below.}
-  \item{nEntries}{ The number of Root Entries to load (defaults to 100).}
+  \item{nEntries}{ The number of Root Entries to load (defaults to 100). If zero or less, do 99,999,999 entries.}
   \item{firstEntry}{ The first entry to load (defaults to 0, whcih means
     to start at the beginning).}
   \item{initialSize}{ The initial guess for the number of rows in the

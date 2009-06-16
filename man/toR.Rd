@@ -15,7 +15,7 @@ toR(rootChain, columns, selection = "", nEntries = 100,
   \item{columns}{ A Root Tree column specification, either as a string
                  or a character vector of Root variable names. }
   \item{selection}{ A Root Tree selection specification to restrict the Tree. Default is no selection.}
-  \item{nEntries}{ The number of Root Entries to load (defaults to 100). }
+  \item{nEntries}{ The number of Root Entries to load (defaults to 100) If zero or less, do 99,999,999 entries. }
   \item{firstEntry}{ The first entry to load (defaults to 0, which means
                      to start at the beginning).}
   \item{initialSize}{ The initial guess for the number of rows in the

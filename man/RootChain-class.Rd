@@ -34,7 +34,7 @@ Root is written by Rene Brun and Fons Rademakers. }
 \seealso{
   \code{\link{openRootChain}}, \code{\link{getNames}}, \code{\link{nEntries}}, \code{\link{toR}}, \code{\link{toRUser}}, \code{\link{makeEventList}},
   \code{\link{narrowWithEventList}}, \code{\link{getEventListName}}, \code{\link{clearEventList}}, \code{\link{getVerbose}},
-  \code{\link{setVerbose}}, \code{\link{getTrace}}, \code{\link{setTrace}} }
+  \code{\link{setVerbose}}, \code{\link{getTrace}}, \code{\link{setTrace}}
 }
 \examples{
 }

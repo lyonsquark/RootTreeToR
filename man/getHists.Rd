@@ -20,7 +20,7 @@ getHists(fileForHists, histNames, dir = NULL)
 \details{
   This function brings Root Histogram data into \R, in the form of an \R
   \code{hist} object (see help on \code{\link{hist}} and the Value
-  section of this help file). AT THIS TIME, ONLY TH1F HISTOGRAMS MAY BE
+  section of this help file). AT THIS TIME, ONLY TH1F and TH1D HISTOGRAMS MAY BE
   IMPORTED. 
 }
 \value{
@@ -34,7 +34,7 @@ getHists(fileForHists, histNames, dir = NULL)
   way (e.g. myHisto$counts). Here is an explanation of what is in the
   object (the ones marked with * are not in the regular \R histogram object):
 
-  \item{type}{TH1F for 1D histograms, TH2F for 2D.*}
+  \item{type}{TH1F or TH1D for 1D histograms, TH2F or TH2D for 2D.*}
   \item{name}{Root Histogram name.*}
   \item{title}{Root Histogram title.*}
   \item{breaks}{The bin edges.}
