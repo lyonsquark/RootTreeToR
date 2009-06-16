@@ -46,7 +46,7 @@ listDirs <- function(fileForHists, dir=NULL) {
 ########################################
 # listHists - list histograms
 listHists <- function(fileForHists,
-                     className=c("TH1F", "TH2F", "TH1D", "TH2D"), dir=NULL, cycles=F) {
+                     className=c("TH1F","TH1D"), dir=NULL, cycles=F) {
 
   className=match.arg(className)
   

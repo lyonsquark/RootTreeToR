@@ -6,14 +6,13 @@
   List the names of Histograms in a Root file.
 }
 \usage{
-listHists(fileForHists, className = c("TH1F", "TH2F"), dir = NULL, cycles = F)
+listHists(fileForHists, className = c("TH1F", "TH1D"), dir = NULL, cycles = F)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{fileForHists}{ Root Histogram file object obtained with
     \code{\link{openFileWithHists}}. }
-  \item{className}{ The Root objects to look for (default is \code{TH1F}
-    and \code{TH2F}).}
+  \item{className}{ The Root objects to look for (default is \code{TH1F}).}
   \item{dir}{ The directory to look into (default is NULL for the top
     level directory). }
   \item{cycles}{ If TRUE, then show the cycle number with the histogram

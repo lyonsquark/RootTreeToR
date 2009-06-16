@@ -7,6 +7,7 @@
 class TFile;
 class TH1;
 class TH1F;
+class TH1D;
 
 extern "C"
 {
