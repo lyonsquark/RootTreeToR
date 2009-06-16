@@ -77,7 +77,7 @@
 		665E60FB0FDA43D300C91818 /* versionTags */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = versionTags; path = ../versionTags; sourceTree = SOURCE_ROOT; };
 		665E610F0FDA446700C91818 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = SOURCE_ROOT; };
 		665E61100FDA44B700C91818 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitattributes; path = ../.gitattributes; sourceTree = SOURCE_ROOT; };
-		665E61260FDA4A2E00C91818 /* Rcpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rcpp.h; sourceTree = "<group>"; };
+		66EC45F20FE84F4000737DC7 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -99,6 +99,7 @@
 				665E60EE0FDA43D300C91818 /* src */,
 				665E60F90FDA43D300C91818 /* tests */,
 				665E60FB0FDA43D300C91818 /* versionTags */,
+				66EC45F20FE84F4000737DC7 /* LICENSE */,
 			);
 			name = RootTreeToR.xcodeProj;
 			sourceTree = "<group>";
@@ -149,7 +150,6 @@
 		665E60C30FDA43D300C91818 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				665E61260FDA4A2E00C91818 /* Rcpp.h */,
 				665E60C40FDA43D300C91818 /* eventListWrapper.h */,
 				665E60C50FDA43D300C91818 /* fileForHistsWrapper.h */,
 				665E60C60FDA43D300C91818 /* rDataFrame.h */,
