@@ -4,6 +4,7 @@
 
 #include "TFile.h"
 #include "TH1F.h"
+#include "TH1D.h"
 #include "TKey.h"
 #include <string.h>
 #include <string>
@@ -193,11 +194,11 @@ SEXP getHistsR(SEXP fileForHists, SEXP histNames, SEXP directoryR)
 
     // Do certain things depending on the class name
 
-    // For right now, we'll just do TH1F's. Maybe do more later.
-    if ( strcmp(className, "TH1F") == 0 ) {
+    // For right now, we'll just do TH1F's and TH1D's. Maybe do more later.
+    if ( strcmp(className, "TH1F") == 0 || strcmp(className, "TH1D") == 0 ) {
 
       // Get the histogram
-      TH1F* hist;
+      TH1* hist;
       gDirectory->GetObject(name.c_str(), hist);
       
       // For TH1F, there are 6 elements to the list (name, type, title,
@@ -325,7 +326,7 @@ unsigned int addXAxis(SEXP data, SEXP dataNames, unsigned int j, TH1* hist)
   
 //////////////////////////////////////////////////
 // addXContents
-unsigned int addXContents(SEXP data, SEXP dataNames, unsigned int j, TH1F* hist)
+unsigned int addXContents(SEXP data, SEXP dataNames, unsigned int j, TH1* hist)
 {
   int n = hist->GetNbinsX();
   

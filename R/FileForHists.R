@@ -46,7 +46,7 @@ listDirs <- function(fileForHists, dir=NULL) {
 ########################################
 # listHists - list histograms
 listHists <- function(fileForHists,
-                     className=c("TH1F", "TH2F"), dir=NULL, cycles=F) {
+                     className=c("TH1F", "TH2F", "TH1D", "TH2D"), dir=NULL, cycles=F) {
 
   className=match.arg(className)
   
@@ -77,7 +77,7 @@ listNamesMatchingClassInFile <- function(fileForHists, className="TH1F",
     names = unique(allNames)
   }
 
-  # We're done
+  # We are done
   names
 }
     
@@ -96,7 +96,7 @@ getHists <- function(fileForHists, histNames, dir=NULL) {
                         d = diff(x$breaks) ; x$equidist = all(d==d[1]) ;
                         class(x) <- c(x$type, "histogram") ; x } )
 
-  # If there's just one, then just return it straight
+  # If there is just one, then just return it straight
   if ( length(ans) == 1 ) return( ans[[1]] )
 
   # Otherwise, return the whole thing as a list
