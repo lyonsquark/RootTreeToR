@@ -34,7 +34,7 @@ unsigned int addHistInfo(SEXP data, SEXP dataNames, unsigned int j, TH1* hist);
 unsigned int addXAxis(SEXP data, SEXP dataNames, unsigned int j, TH1* hist);
 
 unsigned int addXContents(SEXP data, SEXP dataNames,
-			  unsigned int j, TH1F* hist);
+			  unsigned int j, TH1* hist);
 
 #endif
 
