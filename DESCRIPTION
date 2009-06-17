@@ -3,7 +3,7 @@ Version: 4.1
 Date: 2009-06-16
 Title: Root Tree To R
 Author: Adam Lyon <lyon at fnal.gov> Fermi National Accelerator Laboratory, Batavia, IL, USA
-Maintainer: Adam Lyon <lyon at fnal.gov>
+Maintainer: Adam Lyon <lyon@fnal.gov>
 Description: Read Root Trees into R
 SystemRequirements: A properly configured installation of Root. See README.
 Depends: R (>= 2.0.0), methods
