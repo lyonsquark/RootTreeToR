@@ -78,6 +78,7 @@
 		665E610F0FDA446700C91818 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = SOURCE_ROOT; };
 		665E61100FDA44B700C91818 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitattributes; path = ../.gitattributes; sourceTree = SOURCE_ROOT; };
 		66EC45F20FE84F4000737DC7 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = SOURCE_ROOT; };
+		66EC45F60FE962CA00737DC7 /* NEWS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = NEWS; path = ../NEWS; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -100,6 +101,7 @@
 				665E60F90FDA43D300C91818 /* tests */,
 				665E60FB0FDA43D300C91818 /* versionTags */,
 				66EC45F20FE84F4000737DC7 /* LICENSE */,
+				66EC45F60FE962CA00737DC7 /* NEWS */,
 			);
 			name = RootTreeToR.xcodeProj;
 			sourceTree = "<group>";

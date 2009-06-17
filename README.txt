@@ -1,9 +1,13 @@
 #summary Description and Installation Instructions
 #labels Featured
 
-RootTreeToR v4
-March, 2007
-Adam Lyon (lyon@fnal.gov)
+RootTreeToR v4.1
+June 2009
+Adam Lyon (lyon at fnal.gov)
+
+See DESCRIPTION for Copyright
+See LICENSE for license
+See NEWS for latest changes
 
 =Features=
 

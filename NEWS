@@ -1,3 +1,18 @@
+NEWS File For RootTreeToR
+Adam L Lyon
+lyon at fnal.gov
+
+RootTreeToR v4.1 June 2009
+o Fixed non-const char* problem by using std::string instead.
+o Removed unneeded extern "C" around R includes
+o In R v2.9 SET_ELEMENT for a character vector no longer works. Replace with
+	SET_STRING_ELT. 
+o Commented out call to GetEntry(0) from RootChainManger::names. This is apparently
+	not needed and was causing unresolved symbol problems for D0 TMBTree's.  
+o For toR and toRUser, if nEntries is <= 0, make it 99,999,999 . 
+o GetHists and related functions can now deal with TH1D histograms as well as TH1F. 
+
+Old tags...
 4.0 Full documentation. Released version.
 
 v3_3 Added ability to read Root histogram files. No documentation yet.
@@ -18,3 +33,4 @@ does that actual data frame get made.
 v2_0 -- First version that wraps the R data frame in the RDataFrame class
 
 v1_3 -- Version of code that does *not* wrap the R Data Frame
+ß
