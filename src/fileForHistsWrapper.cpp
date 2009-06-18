@@ -181,7 +181,7 @@ SEXP getHistsR(SEXP fileForHists, SEXP histNames, SEXP directoryR)
 		std::string name = CHAR( STRING_ELT(histNames, i) );
     
     // Set the list name
-    SET_ELEMENT( ansNames, i, mkChar(name.c_str()) );
+    SET_STRING_ELT( ansNames, i, mkChar(name.c_str()) );
 
     // What is this thing?
     TKey* key = gDirectory->FindKey(name.c_str());
