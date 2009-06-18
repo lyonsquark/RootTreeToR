@@ -1,6 +1,3 @@
-#summary Description and Installation Instructions
-#labels Featured
-
 RootTreeToR v4.1
 June 2009
 Adam Lyon (lyon at fnal.gov)
@@ -29,23 +26,20 @@ R. It has these features:
   * Export an R data frame to a Root Tree file as a Root Tree of simple
     types.
 
-  * Import data from Root 1D Histograms (TH1F). 2D histograms will be
-    possible in the future.
+  * Import data from Root 1D Histograms (TH1F and TH1D). 
+		2D histograms may be possible in the future.
 
 =Limitations=
 
  I have not attempted to build this package on Windows. The automatic
  build system for this package will surely not work on Windows.
 
- I have tested this package with Root v4 and it seems to work
- fine. When the package is loaded using Root v5, some warning messages
- appear about unresolved symbols. These messages seem to be coming
- from Root and not R. The package loads fine and I haven't seen any
- problems. But you may be wary.
-
+ I have tested this package with Root v4 and Root v5 on Linux and MacOSX
+ (see installation notes below). 
+ 
 =Disclaimer=
 
-Although the author is unaware of mistakes in importing Root
+Although the author is unaware of mistakes due to importing Root
 information into R, YOU are responsible for checking your results with
 Root. There will be minor differences due to round off errors. There
 may be major differences due to bugs. You should repeat parts of your
@@ -66,6 +60,14 @@ DYLD_LIBRARY_PATH for the Mac) environment variables must be set
 correctly.  Furthermore, ROOTSYS must be set correctly. Be sure you do
 all of these things *before* you start R and try building this
 package.
+
+==Root on Mac OSX==
+If you have OS 10.5.x (Leopard) installed on your Mac, you must 
+install a 10.4 (Tiger) version of Root. This workaround is necessary because 
+R is built with Tiger compatibility, which is incompatible with the 10.5 (Leopard)
+builds of Root. Builds of RootTreeToR will fail with a linker error about "rpath" 
+if you try to build against a 10.5 version of Root. I don't know a way around this 
+problem until R is built without Tiger compatibility. Use a Mac OS 10.4 build of Root.
 
 ==Setting up your R library area==
 
@@ -163,14 +165,9 @@ R CMD INSTALL RootTreeToR/
 
 5) See getting started below
 
-
 =GETTING STARTED=
 
-Note: On the Mac, Malloc error messages will appear. These do not
-occur on Linux, so this seems to be a Mac only problem. The way around
-these annoying messages is to, before running R, set the MallocLogFile
-environment variable to "/dev/null". (e.g. export
-MallocLogFile=/dev/null). This does *not* need to be done on Linux.
+0) Make sure Root is set up (e.g. ROOTSYS is defined). 
 
 1) If not already in R, launch it.
 
